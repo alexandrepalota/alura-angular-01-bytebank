@@ -4,7 +4,7 @@
     <th class="table__header__content">Value</th>
     <th class="table__header__content">Target</th>
   </thead>
-  <tbody>
+  <tbody *ngIf="transfers?.length > 0; else emptyList">
     <tr class="table__line" *ngFor="let transfer of transfers">
       <td class="table__line__content">{{ transfer?.date | date: "short" }}</td>
       <td class="table__line__content">{{ transfer?.value | currency }}</td>
@@ -12,4 +12,8 @@
     </tr>
   </tbody>
 </table>
+
+<<ng-template #emptyList>
+  <p>There's no transaction to show.</p>
+</ng-template>
 
