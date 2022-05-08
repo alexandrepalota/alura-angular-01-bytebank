@@ -1,3 +1,4 @@
+import { Transfer } from './../models/transfer.model';
 import { TransferService } from './../services/transfer.service';
 import { Component, Input, OnInit } from '@angular/core';
 
@@ -8,12 +9,15 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class StatementComponent implements OnInit {
 
-  @Input() transfers: any[];
+  @Input() transfers: Transfer[];
 
   constructor(private service: TransferService) { }
 
   ngOnInit(): void {
-    this.transfers = this.service.transfers
+    this.service.getAll().subscribe((transfers: Transfer[]) => {
+      console.table(transfers)
+      this.transfers = transfers
+    })
   }
 
 }
