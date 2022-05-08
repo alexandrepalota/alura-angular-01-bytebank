@@ -4,11 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
+import { StatementComponent } from './statement/statement.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NewTransferComponent
+    NewTransferComponent,
+    StatementComponent
   ],
   imports: [
     BrowserModule,
