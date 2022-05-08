@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class StatementComponent implements OnInit {
 
-  @Input() transfer: any;
+  @Input() transfers: any[];
 
   constructor() { }
 

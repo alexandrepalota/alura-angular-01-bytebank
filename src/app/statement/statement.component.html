@@ -1,2 +1,15 @@
-<p>Value: {{ transfer?.value }}</p>
-<p>Target: {{ transfer?.target }}</p>
+<table class="table">
+  <thead class="table__header">
+    <th class="table__header__content">Date</th>
+    <th class="table__header__content">Value</th>
+    <th class="table__header__content">Target</th>
+  </thead>
+  <tbody>
+    <tr class="table__line" *ngFor="let transfer of transfers">
+      <td class="table__line__content">{{ transfer?.date | date: "short" }}</td>
+      <td class="table__line__content">{{ transfer?.value | currency }}</td>
+      <td class="table__line__content">{{ transfer?.target }}</td>
+    </tr>
+  </tbody>
+</table>
+
