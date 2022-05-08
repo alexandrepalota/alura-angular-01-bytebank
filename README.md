@@ -19,3 +19,13 @@ To create a component using CLI commands, run `ng generate component <component-
 ## Create Services with CLI
 
 To create a service using CLI command, run `ng generate servcie <service-folder/service-name>`.
+
+## Working with mocked REST API
+
+First, install json-server running `npm install -g json-server`.
+
+Create a folder named data (or any other name) in the project root.
+
+Inside data folder, create a file named db.json containing all the desired data.
+
+Finally, run `json-server --watch db.json` inside the data folder.
