@@ -15,3 +15,7 @@ Run `ng serve -o` to run the application, and automatically open a browser scree
 ## Create Componets with CLI
 
 To create a component using CLI commands, run `ng generate component <component-name>`.
+
+## Create Services with CLI
+
+To create a service using CLI command, run `ng generate servcie <service-folder/service-name>`.
