@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-statement',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./statement.component.scss']
 })
 export class StatementComponent implements OnInit {
+
+  @Input() transfer: any;
 
   constructor() { }
 
