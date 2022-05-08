@@ -10,9 +10,15 @@ export class NewTransferComponent {
   value: number = 12;
   target: number = 222;
 
-  transfer() {
+  doTransfer() {
     console.log('Requested new transfer');
     const valueEmit = { value: this.value, target: this.target };
     this.onTransfer.emit(valueEmit);
+    this.clearFields();
+  }
+
+  clearFields() {
+    this.value = 0;
+    this.target = 0;
   }
 }
