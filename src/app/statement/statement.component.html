@@ -1,19 +1,21 @@
-<table class="table">
-  <thead class="table__header">
-    <th class="table__header__content">Date</th>
-    <th class="table__header__content">Value</th>
-    <th class="table__header__content">Target</th>
-  </thead>
-  <tbody *ngIf="transfers?.length > 0; else emptyList">
-    <tr class="table__line" *ngFor="let transfer of transfers">
-      <td class="table__line__content">{{ transfer?.date | date: "short" }}</td>
-      <td class="table__line__content">{{ transfer?.value | currency }}</td>
-      <td class="table__line__content">{{ transfer?.target }}</td>
-    </tr>
-  </tbody>
-</table>
+<section class="container">
+  <h2 class="title">Transfers</h2>
+  <table class="table">
+    <thead class="table__header">
+      <th class="table__header__content">Date</th>
+      <th class="table__header__content">Value</th>
+      <th class="table__header__content">Target</th>
+    </thead>
+    <tbody *ngIf="transfers?.length > 0; else emptyList">
+      <tr class="table__line" *ngFor="let transfer of transfers">
+        <td class="table__content">{{ transfer?.date | date: "short" }}</td>
+        <td class="table__content">{{ transfer?.value | currency }}</td>
+        <td class="table__content">{{ transfer?.target }}</td>
+      </tr>
+    </tbody>
+  </table>
 
-<<ng-template #emptyList>
-  <p>There's no transaction to show.</p>
-</ng-template>
-
+  <ng-template #emptyList>
+    <p>There's no transaction to show.</p>
+  </ng-template>
+</section>
